@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="#379C9898"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_userName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="用户名"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_loginName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="登录名"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="密码"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="手机号"
+        android:textSize="16sp" />
+    <TextView
+        android:layout_marginStart="12dp"
+        android:id="@+id/tv_edite"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/black_3D3838"
+        android:text="编辑"
+        android:textColor="@color/blue_1285DD"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/color_c0c3c8"
+        android:text="删除"
+        android:layout_marginEnd="12sp"
+        android:layout_marginStart="12dp"
+        android:textColor="@color/result_view"
+        android:textSize="16sp" />
+</LinearLayout>

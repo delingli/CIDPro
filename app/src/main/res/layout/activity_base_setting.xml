@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6F8"
+    android:orientation="vertical"
+    tools:context=".BaseSettingActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/fragment_mine_top"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp">
+
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"
+                    android:text="基础设置"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <View style="@style/space_line"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp">
+
+            <EditText
+                android:id="@+id/et_bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:background="@null"
+                android:hint="请输入银行名称"
+                android:textColor="@color/gray_666666"
+                android:textColorHint="@color/gray_bbbbbb"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View style="@style/space_line"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp">
+            <EditText
+                android:id="@+id/et_money_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入银行卡额度"
+                android:singleLine="true"
+                android:textColor="@color/gray_666666"
+                android:textColorHint="@color/gray_bbbbbb"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <View style="@style/space_line"></View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp">
+            <EditText
+                android:id="@+id/et_ct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="是否通过"
+                android:singleLine="true"
+                android:textColor="@color/gray_666666"
+                android:textColorHint="@color/gray_bbbbbb"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View style="@style/space_line"></View>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/distance_15"
+        android:paddingRight="@dimen/distance_15"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_48"
+            android:layout_marginTop="@dimen/height_36"
+            android:background="@drawable/bg_blue"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white_ffffff"
+            android:textSize="@dimen/text_size_16" />
+
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

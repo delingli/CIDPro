@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.io.PrintWriter;
+import com.example.cidpro.accountlist.AccountListActivitys;
+import com.example.cidpro.baseset.BaseSettingActivity;
+import com.example.cidpro.infomation.InformationActivity;
 
 public class LoginActivity extends AppCompatActivity {
 private EditText username;
@@ -32,7 +34,7 @@ private TextView login;
 
     private void Login(String name, String psd) {
         System.out.println("用户名为："+name+",密码为："+psd);
-        Intent intent = new Intent(LoginActivity.this, BaseSettingActivity.class);
+        Intent intent = new Intent(LoginActivity.this, AccountListActivitys.class);
         startActivity(intent);
         finish();
     }

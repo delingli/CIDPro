@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.example.cidpro.infomation.InformationActivity;
+
 public class InformationDetailActivity extends AppCompatActivity {
 private EditText name;
 private EditText sfz;

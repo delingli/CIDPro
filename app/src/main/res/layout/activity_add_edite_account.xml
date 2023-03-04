@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#F5F6F8"
     android:orientation="vertical"
-    tools:context=".BaseSettingActivity">
+    tools:context=".baseset.BaseSettingActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,22 +37,13 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/tv_newadd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="15dp"
-                    android:text="保存"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.appcompat.widget.Toolbar>
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ll_username"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal">
@@ -67,6 +58,8 @@
         <EditText
             android:id="@+id/et_userName"
             android:layout_width="0dp"
+            android:textCursorDrawable="@drawable/edit_cursor"
+
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_weight="1"
@@ -79,6 +72,7 @@
     <View style="@style/space_line" />
 
     <LinearLayout
+        android:id="@+id/ll_loginName"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal">
@@ -91,6 +85,8 @@
             android:textSize="16sp" />
 
         <EditText
+            android:textCursorDrawable="@drawable/edit_cursor"
+
             android:id="@+id/et_loginName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -105,6 +101,7 @@
     <View style="@style/space_line" />
 
     <LinearLayout
+        android:id="@+id/ll_phone"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal">
@@ -119,6 +116,9 @@
         <EditText
             android:id="@+id/et_phone"
             android:layout_width="0dp"
+            android:textCursorDrawable="@drawable/edit_cursor"
+
+            android:inputType="phone"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_weight="1"
@@ -131,6 +131,7 @@
     <View style="@style/space_line" />
 
     <LinearLayout
+        android:id="@+id/ll_password"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal">
@@ -143,18 +144,37 @@
             android:textSize="16sp" />
 
         <EditText
+            android:textCursorDrawable="@drawable/edit_cursor"
+
             android:id="@+id/et_password"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_weight="1"
+
             android:gravity="left|center"
-            android:inputType="textPassword"
-            android:text="1111"
+            android:visibility="visible"
+            android:inputType="textVisiblePassword"
+            android:text=""
             android:textSize="16sp" />
 
 
     </LinearLayout>
 
     <View style="@style/space_line" />
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="保存"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </LinearLayout>

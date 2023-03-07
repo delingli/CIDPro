@@ -5,12 +5,13 @@
       <map>
         <entry key="..\:/cid/CID_Pro/CID_Pro/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1735" />
         <entry key="..\:/cid/CID_Pro/CID_Pro/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1735" />
+        <entry key="..\:/cid/CID_Pro/CID_Pro/app/src/main/res/drawable/ic_icbc.xml" value="0.146" />
         <entry key="..\:/cid/CID_Pro/CID_Pro/app/src/main/res/layout/activity_accountlist.xml" value="0.264" />
         <entry key="..\:/cid/CID_Pro/CID_Pro/app/src/main/res/layout/activity_add_edite_account.xml" value="0.21770833333333334" />
         <entry key="..\:/cid/CID_Pro/CID_Pro/app/src/main/res/layout/activity_base_setting.xml" value="0.2727272727272727" />
         <entry key="..\:/cid/CID_Pro/CID_Pro/app/src/main/res/layout/activity_infomationz.xml" value="0.1390625" />
         <entry key="..\:/cid/CID_Pro/CID_Pro/app/src/main/res/layout/activity_information.xml" value="0.21770833333333334" />
-        <entry key="..\:/cid/CID_Pro/CID_Pro/app/src/main/res/layout/activity_information_detail.xml" value="0.4" />
+        <entry key="..\:/cid/CID_Pro/CID_Pro/app/src/main/res/layout/activity_information_detail.xml" value="0.264" />
         <entry key="..\:/cid/CID_Pro/CID_Pro/app/src/main/res/layout/activity_login.xml" value="0.19479166666666667" />
         <entry key="..\:/cid/CID_Pro/CID_Pro/app/src/main/res/layout/activity_main2.xml" value="0.2" />
         <entry key="..\:/cid/CID_Pro/CID_Pro/app/src/main/res/layout/booton_sheet_layout.xml" value="0.16770833333333332" />

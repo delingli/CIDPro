@@ -44,6 +44,7 @@
             android:launchMode="singleTask" />
         <activity
             android:name=".infomation.ImfomationActivity"
+            android:label="@string/title_home"
             android:launchMode="singleTask" />
         <activity
             android:name=".accountlist.AccountListActivitys"

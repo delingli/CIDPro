@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,7 +19,7 @@ public class InformationDetailActivity extends AppCompatActivity {
     private TextView sfz;
     private TextView check_state;
     private TextView tv_check_information;
-    private TextView tv_money,tv_desc;
+    private TextView tv_money, tv_desc;
 
     @Override
     protected void onDestroy() {
@@ -42,7 +43,20 @@ public class InformationDetailActivity extends AppCompatActivity {
         sfz = findViewById(R.id.tv_sfz);
         if (getIntent() != null) {
             name.setText(getIntent().getStringExtra("name"));
-            sfz.setText(getIntent().getStringExtra("sfz"));
+            String msfz = getIntent().getStringExtra("sfz");
+            if (!TextUtils.isEmpty(msfz)) {
+                if (msfz.length() > 8) {
+                    String begin = msfz.substring(0, 4);
+//                    String show_id = id.substring(0, 3) + "********" + id.substring(11);
+                    String end = msfz.substring(msfz.length() - 4);
+                    sfz.setText(begin + "**********" + end);
+
+                } else {
+                    sfz.setText(msfz);
+
+                }
+            }
+
         }
         tv_check_information = findViewById(R.id.tv_check_information);
         tv_money = findViewById(R.id.tv_money);
@@ -64,7 +78,7 @@ public class InformationDetailActivity extends AppCompatActivity {
             tv_money.setText("尊敬的客户您好，经过评估您申请得" + bank + "信用卡综合评分未达标,敬请谅解,您可登陆" + bank + "APP了解更多信息.");
 
         }
-        tv_desc.setText(bank+"信用卡额度初审内部专用");
+        tv_desc.setText(bank + "信用卡额度初审内部专用");
 
     }
 

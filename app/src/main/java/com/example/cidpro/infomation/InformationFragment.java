@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
@@ -51,63 +52,70 @@ class InformationFragment extends BaseFragment {
 
     private ProgressDialog dialog;
 
-    private void initDialog(Activity activity) {
-        dialog = new ProgressDialog(activity);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setCanceledOnTouchOutside(false);
-        dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        dialog.setMessage("请求网络中...");
+    private void initDialog() {
+        if(dialog==null){
+            dialog = new ProgressDialog(getActivity());
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.setCanceledOnTouchOutside(false);
+            dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            dialog.setMessage("请求网络中...");
+        }
+
     }
 
     public void Btn_Save() {
         if (TextUtils.isEmpty(name.getText().toString())) {
-            Toast.makeText(getActivity(),"请输入正确数据",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "请输入正确数据", Toast.LENGTH_SHORT).show();
             return;
         }
         if (TextUtils.isEmpty(sfz.getText().toString())) {
-            Toast.makeText(getActivity(),"请输入正确数据",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "请输入正确数据", Toast.LENGTH_SHORT).show();
 
             return;
         }
         if (TextUtils.isEmpty(xyk.getText().toString())) {
-            Toast.makeText(getActivity(),"请输入正确数据",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "请输入正确数据", Toast.LENGTH_SHORT).show();
 
             return;
         }
         if (sz.getDrawable() == null) {
-            Toast.makeText(getActivity(),"请输入正确数据",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "请输入正确数据", Toast.LENGTH_SHORT).show();
 
             return;
         }
         if (sf.getDrawable() == null) {
-            Toast.makeText(getActivity(),"请输入正确数据",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "请输入正确数据", Toast.LENGTH_SHORT).show();
 
             return;
         }
         if (xz.getDrawable() == null) {
-            Toast.makeText(getActivity(),"请输入正确数据",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "请输入正确数据", Toast.LENGTH_SHORT).show();
 
             return;
         }
         if (xf.getDrawable() == null) {
-            Toast.makeText(getActivity(),"请输入正确数据",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "请输入正确数据", Toast.LENGTH_SHORT).show();
 
             return;
         }
-
-
+        initDialog();
         //调后台接口
         if (dialog != null && !dialog.isShowing()) {
             dialog.show();
         }
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (dialog != null && dialog.isShowing()) {
+                    dialog.dismiss();
+                }
+                Intent intent = new Intent(getActivity(), InformationDetailActivity.class);
+                intent.putExtra("name", name.getText().toString());
+                intent.putExtra("sfz", sfz.getText().toString());
+                startActivity(intent);
 
-            Intent intent = new Intent(getActivity(), InformationDetailActivity.class);
-            intent.putExtra("name", name.getText().toString());
-            intent.putExtra("sfz", sfz.getText().toString());
-            startActivity(intent);
-            if (dialog != null && dialog.isShowing()) {
-                dialog.dismiss();
             }
+        }, 2000);
 
 
     }
@@ -121,7 +129,6 @@ class InformationFragment extends BaseFragment {
         sf = view.findViewById(R.id.iv_sf_photo);
         xz = view.findViewById(R.id.iv_xz_photo);
         xf = view.findViewById(R.id.iv_xf_photo);
-        initDialog(getActivity());
         sz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

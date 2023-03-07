@@ -66,7 +66,7 @@ public class BaseSettingActivity extends AppCompatActivity {
             }
         });
         tv_bank.setText(SPUtils.getInstance().getString(CameraUtils.SELECT_BANK, "中国工商银行"));
-        money.setText(SPUtils.getInstance().getString(CameraUtils.SELECT_BANK_MONEY, "20000"));
+        money.setText(SPUtils.getInstance().getString(CameraUtils.SELECT_BANK_MONEY, "60000"));
         switchbotton.setChecked(SPUtils.getInstance().getBoolean(CameraUtils.BANK_MONEY_SHENHE_KEY, true));
 
         switchbotton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

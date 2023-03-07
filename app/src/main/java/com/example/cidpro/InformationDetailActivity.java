@@ -68,7 +68,7 @@ public class InformationDetailActivity extends AppCompatActivity {
             tv_check_information.setText("风险客户");
             tv_money.setTextSize(38f);
 
-            tv_money.setText(SPUtils.getInstance().getString(CameraUtils.SELECT_BANK_MONEY, "20000"));
+            tv_money.setText(SPUtils.getInstance().getString(CameraUtils.SELECT_BANK_MONEY, "60000"));
 
         } else {
             check_state.setText("已初审");

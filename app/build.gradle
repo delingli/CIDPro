@@ -40,10 +40,13 @@ android {
 
 dependencies {
     implementation 'com.github.bumptech.glide:glide:4.15.0'
+    implementation("org.greenrobot:eventbus:3.3.1")
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.15.0'
     // PictureSelector 基础 (必须)
     implementation 'io.github.lucksiege:pictureselector:v3.10.7'
-
+    implementation 'com.blankj:utilcodex:1.31.0'
     // 图片压缩 (按需引入)
     implementation 'io.github.lucksiege:compress:v3.10.7'
 

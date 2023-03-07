@@ -15,44 +15,43 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-
-<!--    Android 13版本适配，细化存储权限-->
+    <uses-permission android:name="android.permission.BLUETOOTH" /> <!-- Android 13版本适配，细化存储权限 -->
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
     <queries package="${applicationId}">
         <intent>
-            <action android:name="android.media.action.IMAGE_CAPTURE">
-
-            </action>
+            <action android:name="android.media.action.IMAGE_CAPTURE"></action>
         </intent>
         <intent>
-            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE">
-
-            </action>
+            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE"></action>
         </intent>
     </queries>
-    <!--    android:theme="@style/Theme.CIDPro"-->
+
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:networkSecurityConfig="@xml/network_config"
         android:label="@string/app_name"
-        android:name=".MyApp"
+        android:networkSecurityConfig="@xml/network_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar.FullScreen">
+        android:theme="@style/AppBaseTheme">
         <activity android:name=".AccountAddEditeActivity" />
-
+        <activity
+            android:name=".accountlist.MainActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".infomation.ImfomationActivity"
+            android:launchMode="singleTask" />
         <activity
             android:name=".accountlist.AccountListActivitys"
             android:launchMode="singleTop" />
-        <activity android:name=".InformationDetailActivity"></activity>
-        <activity android:name=".infomation.InformationActivity" />
-        <activity android:name=".baseset.BaseSettingActivity"
-            android:theme="@style/AppBaseTheme"/>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".InformationDetailActivity" />
+        <activity
+            android:name=".baseset.BaseSettingActivity"
+            android:theme="@style/AppBaseTheme" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

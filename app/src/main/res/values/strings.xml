@@ -12,4 +12,7 @@
     <string name="take_a_picture">拍照</string>
     <string name="select_from_album">从相册中选取</string>
     <string name="label_cancel">取消</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">信息填写</string>
+    <string name="title_dashboard">账户管理</string>
 </resources>

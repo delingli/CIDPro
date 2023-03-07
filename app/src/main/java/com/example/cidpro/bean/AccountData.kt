@@ -5,6 +5,11 @@ data class AccountData(
     val message: String,
     val result: Result
 )
+data class LoginData(
+    val code: Int,
+    val message: String,
+    val result: LoginResult
+)
 data class AccountDataz(
     val code: Int,
     val message: String,
@@ -25,6 +30,11 @@ data class Result(
     val `data`: List<Data?>?=null,
     val msg: String?=null
 )
+data class LoginResult(
+    val code: Int,
+    val `data`: Data?=null,
+    val msg: String?=null
+)
 data class Resultz(
     val code: Int,
     val `data`: List<Bank?>?=null,
@@ -37,5 +47,6 @@ data class Data(
     val password: String,
     val phone: String,
     val userName: String,
-    val userType: Int
+    val userType: Int,
+    val token: String?=null
 )

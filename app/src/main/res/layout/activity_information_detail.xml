@@ -70,8 +70,8 @@
                 android:textColor="@color/gray_313844"
                 android:textSize="14sp" />
 
-            <EditText
-                android:id="@+id/et_name"
+            <TextView
+                android:id="@+id/tv_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -104,8 +104,8 @@
                 android:text="身份证"
                 android:textColor="@color/gray_313844"
                 android:textSize="14sp" />
-            <EditText
-                android:id="@+id/et_sfz"
+            <TextView
+                android:id="@+id/tv_sfz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -126,15 +126,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/tv_money"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@color/red"
                 android:layout_marginLeft="@dimen/distance_20"
                 android:layout_marginRight="@dimen/distance_20"
                 android:gravity="center"
-
                 android:text="60000"
-                android:onClick="Btn_Save"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_38"
                 tools:ignore="OnClick" />
@@ -159,8 +158,8 @@
                 android:text="审核状态"
                 android:textColor="@color/gray_313844"
                 android:textSize="14sp" />
-            <EditText
-                android:id="@+id/et_check_state"
+            <TextView
+                android:id="@+id/tv_check_state"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -190,8 +189,8 @@
                     android:text="审核信息"
                     android:textColor="@color/gray_313844"
                     android:textSize="14sp" />
-                <EditText
-                    android:id="@+id/et_check_information"
+                <TextView
+                    android:id="@+id/tv_check_information"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
@@ -214,6 +213,7 @@
                 android:paddingBottom="12dp"
                 android:paddingTop="12dp">
                 <TextView
+                    android:id="@+id/tv_desc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"

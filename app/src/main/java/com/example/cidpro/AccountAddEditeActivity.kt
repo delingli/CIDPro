@@ -17,6 +17,7 @@ import com.lzy.okgo.model.HttpParams
 import com.lzy.okgo.model.Response
 import okhttp3.MediaType
 import okhttp3.RequestBody
+import org.greenrobot.eventbus.EventBus
 
 
 //账户添加,更新
@@ -24,8 +25,16 @@ open class AccountAddEditeActivity : AppCompatActivity() {
     //1 新增 ，2修改编辑
     var type: Int? = 1
     var idz: Int = -1
+    override fun onDestroy() {
+        super.onDestroy()
+        OkGo.getInstance().cancelTag(this)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (supportActionBar != null) {
+            supportActionBar!!.hide()
+        }
+
         setContentView(R.layout.activity_add_edite_account)
         val tv_save = findViewById<TextView>(R.id.tv_save)
         val tv_add_edite = findViewById<TextView>(R.id.tv_add_edite)
@@ -89,11 +98,12 @@ open class AccountAddEditeActivity : AppCompatActivity() {
                                         "添加成功",
                                         Toast.LENGTH_SHORT
                                     ).show()
+                                    EventBus.getDefault().post(MessageEvent())
                                     finish()
                                 } else {
                                     Toast.makeText(
                                         this@AccountAddEditeActivity,
-                                        "添加失败请重新添加",
+                                        it.body()?.result?.msg,
                                         Toast.LENGTH_SHORT
                                     ).show()
                                 }
@@ -114,7 +124,7 @@ open class AccountAddEditeActivity : AppCompatActivity() {
                             this.put("id", idz)
                             this.put("password", et_password.text.toString())
                         }
-                        OkGo.post<AccountData>(EDITUSERPASSWORD).tag(this)
+                        OkGo.get<AccountData>(EDITUSERPASSWORD).tag(this)
                             .params(params)
                             .execute(object :
                                 DialogCallback<AccountData?>(this) {
@@ -127,6 +137,7 @@ open class AccountAddEditeActivity : AppCompatActivity() {
                                                 "更改成功",
                                                 Toast.LENGTH_SHORT
                                             ).show()
+                                            EventBus.getDefault().post(MessageEvent())
                                             finish()
                                         } else {
                                             Toast.makeText(
@@ -139,9 +150,12 @@ open class AccountAddEditeActivity : AppCompatActivity() {
                                 }
                             })
                     }
+                    EventBus.getDefault().post(MessageEvent())
+
                 } else {
                     Toast.makeText(this, "请输入密码", Toast.LENGTH_LONG).show()
                 }
+
 
 
             }

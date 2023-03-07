@@ -27,6 +27,7 @@
     <TextView
         android:id="@+id/tv_password"
         android:layout_width="0dp"
+        android:visibility="gone"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
@@ -36,6 +37,7 @@
 
     <TextView
         android:id="@+id/tv_phone"
+        android:visibility="gone"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -49,7 +51,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
-        android:background="@color/black_3D3838"
+        android:background="@color/color_CFC9CB"
         android:text="编辑"
         android:textColor="@color/blue_1285DD"
         android:textSize="16sp" />

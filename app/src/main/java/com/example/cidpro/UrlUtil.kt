@@ -8,6 +8,7 @@ object UrlUtil {
     var DeleteUser = SERVER + "DeleteUser"
     var EDITUSERPASSWORD = SERVER + "EditUserPassword"
     var adduser = SERVER + "AddUser"
+    var login = SERVER + "Login"
 
     //106.52.91.56:8080/api/SysDictionary?typeCode=bank
     var SysDictionary = SCHEME + "SysDictionary"

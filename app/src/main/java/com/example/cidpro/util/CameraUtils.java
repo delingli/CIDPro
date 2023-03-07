@@ -5,6 +5,11 @@ import android.content.pm.PackageManager;
 import android.hardware.Camera;
 
 public class CameraUtils {
+public static String TOKEN_KEY="token_key";
+public static String ISADMIN="isadmin_key";
+public static String SELECT_BANK="bank_key";
+public static String SELECT_BANK_MONEY="bank_money_key";
+public static String BANK_MONEY_SHENHE_KEY="bank_money_Shenhe_key";
     /**
      * Check if this device has a camera
      * 检查这个设备是否有摄像头

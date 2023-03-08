@@ -58,7 +58,7 @@ class InformationFragment extends BaseFragment {
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.setCanceledOnTouchOutside(false);
             dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-            dialog.setMessage("请求网络中...");
+            dialog.setMessage("信息提交中，请稍后...");
         }
 
     }

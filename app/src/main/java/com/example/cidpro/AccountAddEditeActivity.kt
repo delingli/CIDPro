@@ -180,5 +180,8 @@ open class AccountAddEditeActivity : AppCompatActivity() {
 
         }
     }
+    open fun Btn_Back(view: View?) {
+        finish()
+    }
 
 }
